@@ -22,7 +22,7 @@ def periodic_table():
         el_fired = []
         symbols = list(symbol_Z.keys())
         if show_d_orbitals:
-            cols = st.beta_columns(18)
+            cols = st.columns(18)
             labels = range(1,19)
             for col, label in zip(cols, labels):
                 col.markdown(label)
@@ -49,7 +49,7 @@ def periodic_table():
                 el_fired.append(col.button(el))
 
         else:
-            cols = st.beta_columns(8)
+            cols = st.columns(8)
 
             for col, label in zip(cols, [1, 2, 13, 14, 15, 16, 17, 18]):
                 col.markdown(label)

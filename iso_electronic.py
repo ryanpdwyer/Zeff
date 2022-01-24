@@ -21,7 +21,7 @@ def iso_electronic():
     charges = dict(H=-1, He=0, Li=1, Be=2, N=-3, O=-2, F=-1, Ne=0, Na=1, Mg=2,
                                         P=-3, S=-2, Cl=-1, Ar=0, K=1, Ca=2)
     symbols = list(symbol_Z.keys())
-    cols = st.beta_columns(8)
+    cols = st.columns(8)
 
     def make_periodic_table():
         el_fired = []
@@ -35,22 +35,22 @@ def iso_electronic():
             col.markdown('<span style="color:white; font-size: 22px;">XX</span>', unsafe_allow_html=True)
 
         el_fired.append(cols[-1].button('He'))
-        el_fired.append(cols[0].button('Li+'))
-        el_fired.append(cols[1].button('Be2+'))
+        el_fired.append(cols[0].button('Li⁺'))
+        el_fired.append(cols[1].button('Be²⁺'))
 
-        el_fired.append(cols[-4].button('N3-'))
-        el_fired.append(cols[-3].button('O2-'))
-        el_fired.append(cols[-2].button('F-'))
+        el_fired.append(cols[-4].button('N³⁻'))
+        el_fired.append(cols[-3].button('O²⁻'))
+        el_fired.append(cols[-2].button('F⁻'))
         el_fired.append(cols[-1].button('Ne'))
-        el_fired.append(cols[0].button('Na+'))
-        el_fired.append(cols[1].button('Mg2+'))
+        el_fired.append(cols[0].button('Na⁺'))
+        el_fired.append(cols[1].button('Mg²⁺'))
 
-        el_fired.append(cols[-4].button('P3-'))
-        el_fired.append(cols[-3].button('S2-'))
-        el_fired.append(cols[-2].button('Cl-'))
+        el_fired.append(cols[-4].button('P³⁻'))
+        el_fired.append(cols[-3].button('S²⁻'))
+        el_fired.append(cols[-2].button('Cl⁻'))
         el_fired.append(cols[-1].button('Ar'))
-        el_fired.append(cols[0].button('K+'))
-        el_fired.append(cols[1].button('Ca2+'))
+        el_fired.append(cols[0].button('K⁺'))
+        el_fired.append(cols[1].button('Ca²⁺'))
 
         return el_fired
 
